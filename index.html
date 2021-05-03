@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>USA CRIME STATISTICS</h1>
+        </header>
+        <div class="states-container">
+            <div>
+                <label>Choose state:</label>
+                <select id="statesSelect">
+                    <!-- <option value="0">Whole country</option> -->
+                </select>
+            </div>
+            <iframe id="mapFrame" src="./map.html"></iframe>
+            <section id="results">
+                <div>
+                    <ul id="test">
+                
+                    </ul>
+                </div>
+            </section>
+           <div>
+                <label>Choose crime type:</label>
+                <select id="crimeSelect">
+                    <option value="burglary">
+                        Burglary
+                    </option>
+                    <option value="aggravated-assault">
+                        Aggravated Assault
+                    </option>
+                    <option value="larceny">
+                        Larceny
+                    </option>
+                    <option value="homicide">
+                        Homicide
+                    </option>
+                    <option value="motor-vehicle-theft">
+                        Motor Vehicle Theft
+                    </option>
+                    <option value="rape">
+                        Rape
+                    </option>
+                    <option value="robbery">
+                        Robbery
+                    </option>
+                    <option value="arson">
+                        Arson
+                    </option>
+                    <option value="violent-crime">
+                        Violent Crime
+                    </option>
+                    <option value="property-crime">
+                        Property Crime
+                    </option>
+                </select>
+           </div>
+           
+            <div class="canvas-container">
+                <!-- <img src="./assets/images/graf.PNG"/> -->
+                <div class="loading-container">
+                    <div id="graphHeader" class="graph-header">
+                        California
+                    </div>
+                    <canvas id="graphCanvas"></canvas>
+                    <div id="loadingOverlay" style="display: none;" class="overlay">
+                        <div class="loader"></div>
+                    </div>
+                    <div id="messageOverlay" style="display: none;" class="overlay">
+                        <div class="message-container">
+                            <p id="messageText">Message text</p>
+                            <button onclick="hideMessage()" id="messageButton">OK</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    
+    
+</body>
+
+</html>
